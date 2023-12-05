@@ -10,8 +10,7 @@
   ],
   "defaultOptions" : {
     "codeCoverage" : false,
-    "testExecutionOrdering" : "random",
-    "threadSanitizerEnabled" : true
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
