@@ -90,7 +90,7 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
     func test_load_doesNotDeleteCacheOnLessThanSevenDaysOldCache() {
         let feed = uniqueImageFeed()
         let fixedCurrentDate = Date()
-        let lessThanSevenDaysOldTimestamp = fixedCurrentDate.adding(days: -7).adding(seconds: -1)
+        let lessThanSevenDaysOldTimestamp = fixedCurrentDate.adding(days: -7).adding(seconds: 1)
         let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
         
         sut.load { _ in }
@@ -98,6 +98,45 @@ class LoadFeedFromCacheUseCaseTests: XCTestCase {
         store.completeRetrieval(with: feed.local, timestamp: lessThanSevenDaysOldTimestamp)
         
         XCTAssertEqual(store.receivedMessages, [.retrieve])
+    }
+    
+    func test_load_deleteCacheOnSevenDaysOldCache() {
+        let feed = uniqueImageFeed()
+        let fixedCurrentDate = Date()
+        let lessThanSevenDaysOldTimestamp = fixedCurrentDate.adding(days: -7)
+        let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
+        
+        sut.load { _ in }
+        
+        store.completeRetrieval(with: feed.local, timestamp: lessThanSevenDaysOldTimestamp)
+        
+        XCTAssertEqual(store.receivedMessages, [.retrieve, .deleteCachedFeed])
+    }
+    
+    func test_load_deleteCacheOnMoreThanSevenDaysOldCache() {
+        let feed = uniqueImageFeed()
+        let fixedCurrentDate = Date()
+        let lessThanSevenDaysOldTimestamp = fixedCurrentDate.adding(days: -7).adding(seconds: -1)
+        let (sut, store) = makeSUT(currentDate: { fixedCurrentDate })
+        
+        sut.load { _ in }
+        
+        store.completeRetrieval(with: feed.local, timestamp: lessThanSevenDaysOldTimestamp)
+        
+        XCTAssertEqual(store.receivedMessages, [.retrieve, .deleteCachedFeed])
+    }
+    
+    func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
+        let store = FeedStoreSpy()
+        var sut: LocalFeedLoader? = LocalFeedLoader(store: store, currentDate: Date.init)
+        
+        var receivedResults = [LocalFeedLoader.LoadResult]()
+        sut?.load { receivedResults.append($0) }
+        
+        sut = nil
+        store.completeRetrievalWithEmptyCache()
+        
+        XCTAssertTrue(receivedResults.isEmpty)
     }
 
     // MARK: - Helpers
