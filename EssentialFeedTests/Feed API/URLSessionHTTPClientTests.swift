@@ -121,7 +121,7 @@ final class URLSessionHTTPClientTests: XCTestCase {
     }
     
     private func anyData() -> Data {
-        return Data(bytes: "anyData".utf8)
+        return Data()
     }
     
     private func nonHTTPURLResponse() -> URLResponse {
