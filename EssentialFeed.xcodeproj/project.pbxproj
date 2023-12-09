@@ -32,8 +32,8 @@
 		0E6F8D302B238887008CA03C /* FeedCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED659B42B20F88F003A6A12 /* FeedCacheTestHelpers.swift */; };
 		0E6F8D312B23889C008CA03C /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED659B62B20F967003A6A12 /* SharedTestHelpers.swift */; };
 		0E95D5CC2B245BFB00E9A080 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E95D5C42B245BFA00E9A080 /* EssentialFeediOS.framework */; };
-		0E95D5D12B245BFB00E9A080 /* EssentialFeediOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95D5D02B245BFB00E9A080 /* EssentialFeediOSTests.swift */; };
 		0E95D5D22B245BFB00E9A080 /* EssentialFeediOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E95D5C62B245BFA00E9A080 /* EssentialFeediOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E95D5DC2B2465C600E9A080 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95D5DB2B2465C600E9A080 /* FeedViewControllerTests.swift */; };
 		0EC75B2C2B1E41D300E672C0 /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC75B2B2B1E41D300E672C0 /* FeedItemsMapper.swift */; };
 		0ED659A62B20C6D3003A6A12 /* LocalFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED659A52B20C6D3003A6A12 /* LocalFeedLoader.swift */; };
 		0ED659A82B20C738003A6A12 /* FeedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED659A72B20C738003A6A12 /* FeedStore.swift */; };
@@ -111,9 +111,9 @@
 		0E95D5C42B245BFA00E9A080 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E95D5C62B245BFA00E9A080 /* EssentialFeediOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeediOS.h; sourceTree = "<group>"; };
 		0E95D5CB2B245BFB00E9A080 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E95D5D02B245BFB00E9A080 /* EssentialFeediOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeediOSTests.swift; sourceTree = "<group>"; };
 		0E95D5D92B245C3000E9A080 /* EssentialFeediOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOS.xctestplan; sourceTree = "<group>"; };
 		0E95D5DA2B245D6200E9A080 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = CI_iOS.xctestplan; path = ../CI_iOS.xctestplan; sourceTree = "<group>"; };
+		0E95D5DB2B2465C600E9A080 /* FeedViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewControllerTests.swift; sourceTree = "<group>"; };
 		0EC75B2B2B1E41D300E672C0 /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
 		0ED659A52B20C6D3003A6A12 /* LocalFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedLoader.swift; sourceTree = "<group>"; };
 		0ED659A72B20C738003A6A12 /* FeedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStore.swift; sourceTree = "<group>"; };
@@ -316,7 +316,7 @@
 		0E95D5CF2B245BFB00E9A080 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				0E95D5D02B245BFB00E9A080 /* EssentialFeediOSTests.swift */,
+				0E95D5DB2B2465C600E9A080 /* FeedViewControllerTests.swift */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -664,7 +664,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E95D5D12B245BFB00E9A080 /* EssentialFeediOSTests.swift in Sources */,
+				0E95D5DC2B2465C600E9A080 /* FeedViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +756,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -816,6 +817,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
