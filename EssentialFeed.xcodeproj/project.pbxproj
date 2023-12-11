@@ -45,6 +45,7 @@
 		0E74AA0A2B26F9C00077A74E /* FeedUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74AA092B26F9C00077A74E /* FeedUIComposer.swift */; };
 		0E74AA0D2B2707AD0077A74E /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74AA0C2B2707AD0077A74E /* FeedViewModel.swift */; };
 		0E74AA0F2B2714A80077A74E /* FeedImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74AA0E2B2714A80077A74E /* FeedImageViewModel.swift */; };
+		0E74AA122B2731FE0077A74E /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74AA112B2731FE0077A74E /* FeedPresenter.swift */; };
 		0E95D5CC2B245BFB00E9A080 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E95D5C42B245BFA00E9A080 /* EssentialFeediOS.framework */; };
 		0E95D5DC2B2465C600E9A080 /* FeedViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95D5DB2B2465C600E9A080 /* FeedViewControllerTests.swift */; };
 		0E95D5DE2B24692B00E9A080 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E06DBCC2B1DF1F300BD696D /* EssentialFeed.framework */; };
@@ -162,6 +163,7 @@
 		0E74AA092B26F9C00077A74E /* FeedUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedUIComposer.swift; path = "EssentialFeediOS/Feed UI/Composers/FeedUIComposer.swift"; sourceTree = SOURCE_ROOT; };
 		0E74AA0C2B2707AD0077A74E /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		0E74AA0E2B2714A80077A74E /* FeedImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageViewModel.swift; sourceTree = "<group>"; };
+		0E74AA112B2731FE0077A74E /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
 		0E95D5C42B245BFA00E9A080 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E95D5CB2B245BFB00E9A080 /* EssentialFeediOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeediOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E95D5D92B245C3000E9A080 /* EssentialFeediOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialFeediOS.xctestplan; sourceTree = "<group>"; };
@@ -452,6 +454,7 @@
 			children = (
 				0E74AA0C2B2707AD0077A74E /* FeedViewModel.swift */,
 				0E74AA0E2B2714A80077A74E /* FeedImageViewModel.swift */,
+				0E74AA112B2731FE0077A74E /* FeedPresenter.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E74AA122B2731FE0077A74E /* FeedPresenter.swift in Sources */,
 				0E543EC82B26462500E36607 /* FeedImageDataLoader.swift in Sources */,
 				0E74AA052B26F33E0077A74E /* FeedRefreshViewController.swift in Sources */,
 				0E95D5E92B24D11700E9A080 /* UIView+Shimmering.swift in Sources */,
