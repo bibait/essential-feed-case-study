@@ -28,7 +28,7 @@
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="575" id="EIk-kC-mFi">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="575" id="EIk-kC-mFi" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="66" width="393" height="575"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EIk-kC-mFi" id="eHb-76-Znf">
@@ -58,7 +58,7 @@
                                                                 <constraint firstItem="18y-8j-D8P" firstAttribute="top" secondItem="FfI-uP-oy4" secondAttribute="top" constant="3" id="spW-Ur-eWa"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location, Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhI-cX-VXX">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location, Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhI-cX-VXX" userLabel="Location Label">
                                                             <rect key="frame" x="16.000000000000007" y="0.0" width="125.66666666666669" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,7 +72,7 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L6z-i2-6CW">
                                                             <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1p-29-L6Z">
+                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1p-29-L6Z" userLabel="Retry">
                                                             <rect key="frame" x="220" y="220" width="92" height="85"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                             <color key="tintColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -81,6 +81,9 @@
                                                                 <color key="titleColor" red="0.89019607840000003" green="0.89019607840000003" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <imageReference key="image" image="arrow.clockwise" catalog="system" symbolScale="large"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="EIk-kC-mFi" eventType="touchUpInside" id="wDE-pI-hSI"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,6 +126,14 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="De0-o6-hPX" secondAttribute="bottom" priority="999" constant="6" id="rSs-sP-k69"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="Ouy-xs-qTC" id="GHK-BL-iVQ"/>
+                                    <outlet property="feedImageContainer" destination="Elp-Tw-uQL" id="vax-vT-xHc"/>
+                                    <outlet property="feedImageRetryButton" destination="M1p-29-L6Z" id="8D2-vZ-noP"/>
+                                    <outlet property="feedImageView" destination="L6z-i2-6CW" id="SlK-sR-IED"/>
+                                    <outlet property="locationContainer" destination="uh7-9s-EzL" id="gsg-jd-C0I"/>
+                                    <outlet property="locationLabel" destination="WhI-cX-VXX" id="Sjb-Gq-DdN"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -132,6 +143,7 @@
                         </connections>
                     </tableView>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="rlZ-z9-t0b">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <connections>
                             <action selector="refresh" destination="s0J-7C-jrM" eventType="valueChanged" id="jaN-UK-Lbc"/>

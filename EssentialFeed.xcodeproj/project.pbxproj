@@ -354,7 +354,6 @@
 		0E543ECC2B2646AB00E36607 /* Feed UI */ = {
 			isa = PBXGroup;
 			children = (
-				0E543ED82B26491400E36607 /* Helpers */,
 				0E543ECD2B2646B100E36607 /* Controllers */,
 			);
 			path = "Feed UI";
@@ -363,6 +362,7 @@
 		0E543ECD2B2646B100E36607 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0E543ED82B26491400E36607 /* Helpers */,
 				0E95D5DB2B2465C600E9A080 /* FeedViewControllerTests.swift */,
 			);
 			path = Controllers;
