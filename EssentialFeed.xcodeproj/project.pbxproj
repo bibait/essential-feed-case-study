@@ -701,6 +701,7 @@
 				en,
 				Base,
 				"pt-BR",
+				el,
 			);
 			mainGroup = 0E06DBC22B1DF1F300BD696D;
 			productRefGroup = 0E06DBCD2B1DF1F300BD696D /* Products */;
