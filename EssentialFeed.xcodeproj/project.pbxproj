@@ -85,6 +85,7 @@
 		0EEE326B2B2B645200C6D888 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE326A2B2B645200C6D888 /* FeedErrorViewModel.swift */; };
 		0EEE32712B2B65B000C6D888 /* UIRefreshControl+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32702B2B65B000C6D888 /* UIRefreshControl+Helpers.swift */; };
 		0EEE32742B2B681900C6D888 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32732B2B681900C6D888 /* FeedPresenterTests.swift */; };
+		0EEE32762B2B74B000C6D888 /* Feed.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE32752B2B74B000C6D888 /* Feed.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -217,6 +218,7 @@
 		0EEE326A2B2B645200C6D888 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 		0EEE32702B2B65B000C6D888 /* UIRefreshControl+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+Helpers.swift"; sourceTree = "<group>"; };
 		0EEE32732B2B681900C6D888 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
+		0EEE32752B2B74B000C6D888 /* Feed.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Feed.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -581,6 +583,7 @@
 			isa = PBXGroup;
 			children = (
 				0EEE32732B2B681900C6D888 /* FeedPresenterTests.swift */,
+				0EEE32752B2B74B000C6D888 /* Feed.xcstrings */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -784,6 +787,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EEE32762B2B74B000C6D888 /* Feed.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
