@@ -87,6 +87,7 @@
 		0EEE32742B2B681900C6D888 /* FeedPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32732B2B681900C6D888 /* FeedPresenterTests.swift */; };
 		0EEE32792B2B767D00C6D888 /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32782B2B767D00C6D888 /* FeedPresenter.swift */; };
 		0EEE327A2B2B783600C6D888 /* Feed.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0EEE32752B2B74B000C6D888 /* Feed.xcstrings */; };
+		0EEE327C2B2B7BF200C6D888 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE327B2B2B7BF200C6D888 /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,7 @@
 		0EEE32732B2B681900C6D888 /* FeedPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenterTests.swift; sourceTree = "<group>"; };
 		0EEE32752B2B74B000C6D888 /* Feed.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Feed.xcstrings; sourceTree = "<group>"; };
 		0EEE32782B2B767D00C6D888 /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		0EEE327B2B2B7BF200C6D888 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -595,6 +597,7 @@
 			children = (
 				0EEE32752B2B74B000C6D888 /* Feed.xcstrings */,
 				0EEE32782B2B767D00C6D888 /* FeedPresenter.swift */,
+				0EEE327B2B2B7BF200C6D888 /* FeedViewModel.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -848,6 +851,7 @@
 				0E06DBED2B1DFBAA00BD696D /* RemoteFeedLoader.swift in Sources */,
 				0E6F8D162B23571E008CA03C /* FeedStore.xcdatamodeld in Sources */,
 				0ED659AC2B20CDD2003A6A12 /* LocalFeedImage.swift in Sources */,
+				0EEE327C2B2B7BF200C6D888 /* FeedViewModel.swift in Sources */,
 				0ED659A82B20C738003A6A12 /* FeedStore.swift in Sources */,
 				0ED659A62B20C6D3003A6A12 /* LocalFeedLoader.swift in Sources */,
 				0E06DBEF2B1E417C00BD696D /* HTTPClient.swift in Sources */,
