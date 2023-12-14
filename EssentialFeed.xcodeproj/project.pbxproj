@@ -82,6 +82,7 @@
 		0EDD4C0E2B1F36510030D5AA /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E06DBCC2B1DF1F300BD696D /* EssentialFeed.framework */; };
 		0EDD4C142B1F3FB20030D5AA /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDD4C022B1F213E0030D5AA /* XCTestCase+MemoryLeakTracking.swift */; };
 		0EEE32692B2B503600C6D888 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32682B2B503600C6D888 /* ErrorView.swift */; };
+		0EEE326B2B2B645200C6D888 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE326A2B2B645200C6D888 /* FeedErrorViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -211,6 +212,7 @@
 		0EDD4C0A2B1F36510030D5AA /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDD4C0C2B1F36510030D5AA /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
 		0EEE32682B2B503600C6D888 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		0EEE326A2B2B645200C6D888 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,6 +476,7 @@
 				0E74AA112B2731FE0077A74E /* FeedPresenter.swift */,
 				0E74AA132B2744A10077A74E /* FeedImagePresenter.swift */,
 				0EA926EF2B27979500ED079E /* Feed.xcstrings */,
+				0EEE326A2B2B645200C6D888 /* FeedErrorViewModel.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -865,6 +868,7 @@
 				0E74AA1C2B2764EB0077A74E /* UITableView+Dequeueing.swift in Sources */,
 				0E57A9DF2B284273003750CF /* MainQueueDispatchDecorator.swift in Sources */,
 				0E57A9E52B284358003750CF /* FeedLoaderPresentationAdapter.swift in Sources */,
+				0EEE326B2B2B645200C6D888 /* FeedErrorViewModel.swift in Sources */,
 				0E74AA142B2744A10077A74E /* FeedImagePresenter.swift in Sources */,
 				0E95D5E52B249C1000E9A080 /* FeedViewController.swift in Sources */,
 				0E95D5E72B24B6AA00E9A080 /* FeedImageCell.swift in Sources */,
