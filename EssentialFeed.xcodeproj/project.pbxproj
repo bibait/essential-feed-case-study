@@ -81,6 +81,7 @@
 		0EDD4C0D2B1F36510030D5AA /* EssentialFeedAPIEndToEndTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDD4C0C2B1F36510030D5AA /* EssentialFeedAPIEndToEndTests.swift */; };
 		0EDD4C0E2B1F36510030D5AA /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E06DBCC2B1DF1F300BD696D /* EssentialFeed.framework */; };
 		0EDD4C142B1F3FB20030D5AA /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDD4C022B1F213E0030D5AA /* XCTestCase+MemoryLeakTracking.swift */; };
+		0EEE32692B2B503600C6D888 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32682B2B503600C6D888 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +210,7 @@
 		0EDD4C042B1F30270030D5AA /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		0EDD4C0A2B1F36510030D5AA /* EssentialFeedAPIEndToEndTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialFeedAPIEndToEndTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EDD4C0C2B1F36510030D5AA /* EssentialFeedAPIEndToEndTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialFeedAPIEndToEndTests.swift; sourceTree = "<group>"; };
+		0EEE32682B2B503600C6D888 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +371,7 @@
 				0E74AA172B274BAB0077A74E /* Feed.storyboard */,
 				0E74AA1B2B2764EB0077A74E /* UITableView+Dequeueing.swift */,
 				0E74AA1D2B2765EB0077A74E /* UIImageView+Animations.swift */,
+				0EEE32682B2B503600C6D888 /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -857,6 +860,7 @@
 				0E74AA122B2731FE0077A74E /* FeedPresenter.swift in Sources */,
 				0E543EC82B26462500E36607 /* FeedImageDataLoader.swift in Sources */,
 				0E57A9E32B284322003750CF /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
+				0EEE32692B2B503600C6D888 /* ErrorView.swift in Sources */,
 				0E95D5E92B24D11700E9A080 /* UIView+Shimmering.swift in Sources */,
 				0E74AA1C2B2764EB0077A74E /* UITableView+Dequeueing.swift in Sources */,
 				0E57A9DF2B284273003750CF /* MainQueueDispatchDecorator.swift in Sources */,
