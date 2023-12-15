@@ -1,5 +1,3 @@
-import Foundation
-
 public struct FeedImageViewModel<Image> {
     public let description: String?
     public let location: String?
