@@ -87,6 +87,7 @@
 		0EEE327E2B2B7C2800C6D888 /* FeedLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE327D2B2B7C2800C6D888 /* FeedLoadingViewModel.swift */; };
 		0EEE32802B2B7C5000C6D888 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE327F2B2B7C5000C6D888 /* FeedErrorViewModel.swift */; };
 		0EEE32812B2B7DE200C6D888 /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA926F42B279CAD00ED079E /* FeedLocalizationTests.swift */; };
+		0EEE32832B2C71FA00C6D888 /* FeedImagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32822B2C71FA00C6D888 /* FeedImagePresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,7 @@
 		0EEE327B2B2B7BF200C6D888 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		0EEE327D2B2B7C2800C6D888 /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
 		0EEE327F2B2B7C5000C6D888 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
+		0EEE32822B2C71FA00C6D888 /* FeedImagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -575,6 +577,7 @@
 			children = (
 				0EEE32732B2B681900C6D888 /* FeedPresenterTests.swift */,
 				0EA926F42B279CAD00ED079E /* FeedLocalizationTests.swift */,
+				0EEE32822B2C71FA00C6D888 /* FeedImagePresenterTests.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -862,6 +865,7 @@
 				0E06DBEA2B1DF50F00BD696D /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				0EEE32742B2B681900C6D888 /* FeedPresenterTests.swift in Sources */,
 				0EDD4C002B1F02280030D5AA /* URLSessionHTTPClientTests.swift in Sources */,
+				0EEE32832B2C71FA00C6D888 /* FeedImagePresenterTests.swift in Sources */,
 				0E6F8D0C2B231AC3008CA03C /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */,
 				0EEE32812B2B7DE200C6D888 /* FeedLocalizationTests.swift in Sources */,
 				0ED659B12B20D427003A6A12 /* FeedStoreSpy.swift in Sources */,
