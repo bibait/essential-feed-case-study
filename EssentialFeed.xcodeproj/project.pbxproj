@@ -92,6 +92,7 @@
 		0EEE32902B2CC34100C6D888 /* HTTPClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE328F2B2CC34100C6D888 /* HTTPClientSpy.swift */; };
 		0EEE32922B2CC46A00C6D888 /* RemoteFeedImageDataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32912B2CC46A00C6D888 /* RemoteFeedImageDataLoader.swift */; };
 		0EEE32952B2CCCBA00C6D888 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32942B2CCCBA00C6D888 /* HTTPURLResponse+StatusCode.swift */; };
+		0EEE32972B2CCD6F00C6D888 /* URLProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32962B2CCD6F00C6D888 /* URLProtocolStub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +232,7 @@
 		0EEE328F2B2CC34100C6D888 /* HTTPClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientSpy.swift; sourceTree = "<group>"; };
 		0EEE32912B2CC46A00C6D888 /* RemoteFeedImageDataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedImageDataLoader.swift; sourceTree = "<group>"; };
 		0EEE32942B2CCCBA00C6D888 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
+		0EEE32962B2CCD6F00C6D888 /* URLProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolStub.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -594,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				0EEE328F2B2CC34100C6D888 /* HTTPClientSpy.swift */,
+				0EEE32962B2CCD6F00C6D888 /* URLProtocolStub.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED659B52B20F88F003A6A12 /* FeedCacheTestHelpers.swift in Sources */,
+				0EEE32972B2CCD6F00C6D888 /* URLProtocolStub.swift in Sources */,
 				0E06DBEA2B1DF50F00BD696D /* LoadFeedFromRemoteUseCaseTests.swift in Sources */,
 				0EEE32742B2B681900C6D888 /* FeedPresenterTests.swift in Sources */,
 				0EEE328D2B2C89E800C6D888 /* RemoteFeedImageDataLoaderTests.swift in Sources */,
