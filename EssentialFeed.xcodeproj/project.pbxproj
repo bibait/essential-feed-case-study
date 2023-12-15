@@ -88,6 +88,7 @@
 		0EEE32802B2B7C5000C6D888 /* FeedErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE327F2B2B7C5000C6D888 /* FeedErrorViewModel.swift */; };
 		0EEE32812B2B7DE200C6D888 /* FeedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA926F42B279CAD00ED079E /* FeedLocalizationTests.swift */; };
 		0EEE32832B2C71FA00C6D888 /* FeedImagePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32822B2C71FA00C6D888 /* FeedImagePresenterTests.swift */; };
+		0EEE32852B2C7E9100C6D888 /* FeedImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEE32842B2C7E9100C6D888 /* FeedImagePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +224,7 @@
 		0EEE327D2B2B7C2800C6D888 /* FeedLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoadingViewModel.swift; sourceTree = "<group>"; };
 		0EEE327F2B2B7C5000C6D888 /* FeedErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedErrorViewModel.swift; sourceTree = "<group>"; };
 		0EEE32822B2C71FA00C6D888 /* FeedImagePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenterTests.swift; sourceTree = "<group>"; };
+		0EEE32842B2C7E9100C6D888 /* FeedImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImagePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -590,6 +592,7 @@
 				0EEE327B2B2B7BF200C6D888 /* FeedViewModel.swift */,
 				0EEE327D2B2B7C2800C6D888 /* FeedLoadingViewModel.swift */,
 				0EEE327F2B2B7C5000C6D888 /* FeedErrorViewModel.swift */,
+				0EEE32842B2C7E9100C6D888 /* FeedImagePresenter.swift */,
 			);
 			path = "Feed Presentation";
 			sourceTree = "<group>";
@@ -853,6 +856,7 @@
 				0E6F8D132B235607008CA03C /* CoreDataFeedStore.swift in Sources */,
 				0EEE32802B2B7C5000C6D888 /* FeedErrorViewModel.swift in Sources */,
 				0EEE327E2B2B7C2800C6D888 /* FeedLoadingViewModel.swift in Sources */,
+				0EEE32852B2C7E9100C6D888 /* FeedImagePresenter.swift in Sources */,
 				0E6F8D1F2B237872008CA03C /* ManagedFeedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
