@@ -11,7 +11,7 @@ public final class LocalFeedLoader {
     
     public typealias ValidationResult = Result<Void, Error>
 
-    public func validateCache(completion: @escaping (ValidationResult) -> Void = { _ in }) {
+    public func validateCache(completion: @escaping (ValidationResult) -> Void) {
         store.retrieve { [weak self] result in
             guard let self = self else { return }
 
