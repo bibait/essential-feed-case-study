@@ -16,4 +16,7 @@
    <FileRef
       location = "group:../EssentialFeed/EssentialFeed.xctestplan">
    </FileRef>
+   <FileRef
+      location = "group:../EssentialFeed/EssentialFeedCacheIntegrationTests.xctestplan">
+   </FileRef>
 </Workspace>
