@@ -1,1 +1,1 @@
-[![CI](https://github.com/bibait/EssentialFeed/actions/workflows/CI.yml/badge.svg)](https://github.com/bibait/EssentialFeed/actions/workflows/CI.yml)
+[![CI](https://github.com/bibait/essential-feed-case-study/actions/workflows/CI.yml/badge.svg)](https://github.com/bibait/essential-feed-case-study/actions/workflows/CI.yml)
