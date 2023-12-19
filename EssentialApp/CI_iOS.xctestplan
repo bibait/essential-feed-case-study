@@ -9,12 +9,31 @@
     }
   ],
   "defaultOptions" : {
-    "codeCoverage" : false,
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:EssentialApp.xcodeproj",
+          "identifier" : "0EB5038A2B30A15B00DCA828",
+          "name" : "EssentialApp"
+        },
+        {
+          "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
+          "identifier" : "0E06DBCB2B1DF1F300BD696D",
+          "name" : "EssentialFeed"
+        },
+        {
+          "containerPath" : "container:..\/EssentialFeed\/EssentialFeed.xcodeproj",
+          "identifier" : "0E95D5C32B245BFA00E9A080",
+          "name" : "EssentialFeediOS"
+        }
+      ]
+    },
     "targetForVariableExpansion" : {
       "containerPath" : "container:EssentialApp.xcodeproj",
       "identifier" : "0EB5038A2B30A15B00DCA828",
       "name" : "EssentialApp"
-    }
+    },
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
