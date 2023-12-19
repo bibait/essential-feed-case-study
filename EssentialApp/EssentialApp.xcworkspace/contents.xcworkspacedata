@@ -22,4 +22,7 @@
    <FileRef
       location = "group:../EssentialFeed/EssentialFeediOS.xctestplan">
    </FileRef>
+   <FileRef
+      location = "group:../EssentialFeed/EssentialFeedCacheIntegrationTests.xctestplan">
+   </FileRef>
 </Workspace>
