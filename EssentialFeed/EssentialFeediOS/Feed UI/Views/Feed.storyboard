@@ -83,6 +83,7 @@
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L6z-i2-6CW">
                                                             <rect key="frame" x="0.0" y="0.0" width="353" height="353"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="feed-image-view"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1p-29-L6Z" userLabel="Retry">
                                                             <rect key="frame" x="220" y="220" width="92" height="85"/>
@@ -138,6 +139,7 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="De0-o6-hPX" secondAttribute="bottom" priority="999" constant="6" id="rSs-sP-k69"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="feed-image-cell"/>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="Ouy-xs-qTC" id="GHK-BL-iVQ"/>
                                     <outlet property="feedImageContainer" destination="Elp-Tw-uQL" id="vax-vT-xHc"/>
