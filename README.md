@@ -1,1 +1,1 @@
-[![CI](https://github.com/bibait/essential-feed-case-study/actions/workflows/CI.yml/badge.svg)](https://github.com/bibait/essential-feed-case-study/actions/workflows/CI.yml)
+[![CI-macOS](https://github.com/bibait/essential-feed-case-study/actions/workflows/CI-macOS.yml/badge.svg)](https://github.com/bibait/essential-feed-case-study/actions/workflows/CI-macOS.yml) [![CI-iOS](https://github.com/bibait/essential-feed-case-study/actions/workflows/CI-iOS.yml/badge.svg)](https://github.com/bibait/essential-feed-case-study/actions/workflows/CI-iOS.yml)
