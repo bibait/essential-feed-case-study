@@ -36,6 +36,10 @@ extension FeedViewController {
         ds?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
     }
     
+    func renderedFeedImageData(at index: Int) -> Data? {
+        return simulateFeedImageViewVisible(at: index)?.renderedImage
+    }
+    
     var errorMessage: String? {
         return errorView?.message
     }
@@ -49,6 +53,8 @@ extension FeedViewController {
     }
     
     func feedImageView(at row: Int) -> UITableViewCell? {
+        guard numberOfRenderedFeedImageViews() > row else { return nil }
+        
         let ds = tableView.dataSource
         let index = IndexPath(row: row, section: feedImagesSection)
         
@@ -62,27 +68,37 @@ extension FeedViewController {
     func simulateAppearance() {
         if !isViewLoaded {
             loadViewIfNeeded()
-            replaceRefreshControlWithFakeForiOS17Support()
+            prepareForFirstAppearance()
         }
         
         beginAppearanceTransition(true, animated: false)
         endAppearanceTransition()
     }
+    
+    private func prepareForFirstAppearance() {
+        setSmallFrameToPreventRenderingCells()
+        replaceRefreshControlWithFakeForiOS17PlusSupport()
+    }
 
-    func replaceRefreshControlWithFakeForiOS17Support() {
-        let fake = FakeRefreshControl()
-        
+    private func setSmallFrameToPreventRenderingCells() {
+        tableView.frame = CGRect(x: 0, y: 0, width: 390, height: 1)
+    }
+
+    private func replaceRefreshControlWithFakeForiOS17PlusSupport() {
+        let fakeRefreshControl = FakeUIRefreshControl()
+
         refreshControl?.allTargets.forEach { target in
             refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach { action in
-                fake.addTarget(target, action: Selector(action), for: .valueChanged)
+                fakeRefreshControl.addTarget(target, action: Selector(action), for: .valueChanged)
             }
         }
-        
-        refreshControl = fake
+
+        refreshControl = fakeRefreshControl
     }
+
 }
 
-private class FakeRefreshControl: UIRefreshControl {
+private class FakeUIRefreshControl: UIRefreshControl {
     private var _isRefreshing = false
     
     override var isRefreshing: Bool { _isRefreshing }
