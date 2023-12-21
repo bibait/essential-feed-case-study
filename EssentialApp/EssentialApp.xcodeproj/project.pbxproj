@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E401C512B3486BC00C6DBC2 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401C502B3486BC00C6DBC2 /* CombineHelpers.swift */; };
 		0E5CD5AB2B30A29600CCD700 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5CD5A92B30A29600CCD700 /* EssentialFeed.framework */; };
 		0E5CD5AC2B30A29600CCD700 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5CD5A92B30A29600CCD700 /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E5CD5AD2B30A29600CCD700 /* EssentialFeediOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5CD5AA2B30A29600CCD700 /* EssentialFeediOS.framework */; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E401C502B3486BC00C6DBC2 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		0E5CD5A92B30A29600CCD700 /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5CD5AA2B30A29600CCD700 /* EssentialFeediOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EssentialFeediOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB5038B2B30A15B00DCA828 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 				0EB503972B30A15D00DCA828 /* Assets.xcassets */,
 				0EB503992B30A15D00DCA828 /* LaunchScreen.storyboard */,
 				0EB5039C2B30A15D00DCA828 /* Info.plist */,
+				0E401C502B3486BC00C6DBC2 /* CombineHelpers.swift */,
 			);
 			path = EssentialApp;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 			files = (
 				0EE4C51C2B32D27F00859E6D /* FeedViewAdapter.swift in Sources */,
 				0EE4C51A2B32D27F00859E6D /* FeedImageDataLoaderPresentationAdapter.swift in Sources */,
+				0E401C512B3486BC00C6DBC2 /* CombineHelpers.swift in Sources */,
 				0EB503932B30A15B00DCA828 /* ViewController.swift in Sources */,
 				0EB5038F2B30A15B00DCA828 /* AppDelegate.swift in Sources */,
 				0EE4C5182B32D27F00859E6D /* WeakRefVirtualProxy.swift in Sources */,
