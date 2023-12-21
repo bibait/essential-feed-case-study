@@ -42,7 +42,6 @@
 		0E74AA1C2B2764EB0077A74E /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74AA1B2B2764EB0077A74E /* UITableView+Dequeueing.swift */; };
 		0E74AA1E2B2765EB0077A74E /* UIImageView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E74AA1D2B2765EB0077A74E /* UIImageView+Animations.swift */; };
 		0E95D5DE2B24692B00E9A080 /* EssentialFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E06DBCC2B1DF1F300BD696D /* EssentialFeed.framework */; };
-		0E95D5DF2B24692B00E9A080 /* EssentialFeed.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E06DBCC2B1DF1F300BD696D /* EssentialFeed.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E95D5E52B249C1000E9A080 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95D5E42B249C1000E9A080 /* FeedViewController.swift */; };
 		0E95D5E72B24B6AA00E9A080 /* FeedImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95D5E62B24B6AA00E9A080 /* FeedImageCell.swift */; };
 		0E95D5E92B24D11700E9A080 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E95D5E82B24D11700E9A080 /* UIView+Shimmering.swift */; };
@@ -128,20 +127,6 @@
 			remoteInfo = EssentialFeed;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		0E95D5E22B24692B00E9A080 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				0E95D5DF2B24692B00E9A080 /* EssentialFeed.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E06DBCC2B1DF1F300BD696D /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -682,7 +667,6 @@
 				0E95D5C02B245BFA00E9A080 /* Sources */,
 				0E95D5C12B245BFA00E9A080 /* Frameworks */,
 				0E95D5C22B245BFA00E9A080 /* Resources */,
-				0E95D5E22B24692B00E9A080 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
