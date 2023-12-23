@@ -6,7 +6,7 @@ final class LoadResourcePresenterTests: XCTestCase {
     func test_didStartLoadingFeed_displaysNoErrorMessageAndStartLoading() {
         let (sut, view) = makeSUT()
         
-        sut.didStartLoadingFeed()
+        sut.didStartLoading()
         
         XCTAssertEqual(view.messages, [
             .display(errorMessage: .none),
