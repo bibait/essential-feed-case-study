@@ -6,7 +6,10 @@ import EssentialFeediOS
 public final class FeedUIComposer {
     private init() { }
 
-    public static func feedComposedWith(feedLoader: @escaping () -> AnyPublisher<[FeedImage], Error>, imageLoader: @escaping (URL) -> FeedImageDataLoader.Publisher) -> FeedViewController {
+    public static func feedComposedWith(
+        feedLoader: @escaping () -> AnyPublisher<[FeedImage], Error>,
+        imageLoader: @escaping (URL) -> FeedImageDataLoader.Publisher)
+    -> FeedViewController {
         let presentationAdapter = LoadResourcePresentationAdapter<[FeedImage], FeedViewAdapter>(loader: feedLoader)
         
         let feedController = makeFeedViewController(
