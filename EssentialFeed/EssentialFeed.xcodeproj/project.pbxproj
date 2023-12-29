@@ -415,6 +415,7 @@
 		0E3F260F2B3F1D1F009DAE89 /* Shared UI */ = {
 			isa = PBXGroup;
 			children = (
+				0E75A3792B3F24F600456BD1 /* snapshots */,
 				0E3F26102B3F1ECB009DAE89 /* ListSnapshotTests.swift */,
 			);
 			path = "Shared UI";
@@ -423,9 +424,9 @@
 		0E401C422B34215600C6DBC2 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				0E3F260F2B3F1D1F009DAE89 /* Shared UI */,
 				0E401C4B2B3429DC00C6DBC2 /* Helpers */,
-				0E401C432B34215600C6DBC2 /* FeedSnapshotTests.swift */,
+				0E3F260F2B3F1D1F009DAE89 /* Shared UI */,
+				0E75A37A2B3F254200456BD1 /* Feed UI */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
@@ -434,8 +435,8 @@
 			isa = PBXGroup;
 			children = (
 				0E401C4C2B342A0F00C6DBC2 /* UIImage+TestHelpers.swift */,
-				0E3F26122B3F2157009DAE89 /* XCTestCase+Snapshot.swift */,
 				0E3F26142B3F21DB009DAE89 /* UIViewController+Snapshot.swift */,
+				0E3F26122B3F2157009DAE89 /* XCTestCase+Snapshot.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -606,6 +607,21 @@
 				0E6F8D262B238317008CA03C /* EssentialFeedCacheIntegrationTests.swift */,
 			);
 			path = EssentialFeedCacheIntegrationTests;
+			sourceTree = "<group>";
+		};
+		0E75A3792B3F24F600456BD1 /* snapshots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = snapshots;
+			sourceTree = "<group>";
+		};
+		0E75A37A2B3F254200456BD1 /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				0E401C432B34215600C6DBC2 /* FeedSnapshotTests.swift */,
+			);
+			path = "Feed UI";
 			sourceTree = "<group>";
 		};
 		0E95D5C52B245BFA00E9A080 /* EssentialFeediOS */ = {
