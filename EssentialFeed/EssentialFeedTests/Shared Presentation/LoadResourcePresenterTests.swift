@@ -3,7 +3,7 @@ import EssentialFeed
 
 final class LoadResourcePresenterTests: XCTestCase {
     
-    func test_didStartLoadingFeed_displaysNoErrorMessageAndStartLoading() {
+    func test_didStartLoading_displaysNoErrorMessageAndStartLoading() {
         let (sut, view) = makeSUT()
         
         sut.didStartLoading()
