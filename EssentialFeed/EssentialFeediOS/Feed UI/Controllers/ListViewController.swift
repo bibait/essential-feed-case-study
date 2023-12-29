@@ -11,8 +11,8 @@ public protocol CellController {
     func cancelLoad()
 }
 
-public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, ResourceLoadingView, ResourceErrorView {
-    private var onViewIsAppearing: ((FeedViewController) -> Void)?
+public final class ListViewController: UITableViewController, UITableViewDataSourcePrefetching, ResourceLoadingView, ResourceErrorView {
+    private var onViewIsAppearing: ((ListViewController) -> Void)?
     public var delegate: FeedViewControllerDelegate?
     
     @IBOutlet private(set) public var errorView: ErrorView?
