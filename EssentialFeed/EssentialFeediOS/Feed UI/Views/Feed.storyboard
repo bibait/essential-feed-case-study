@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s0J-7C-jrM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,36 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="hFW-EL-Euh" customClass="ErrorView" customModule="EssentialFeediOS" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy7-Es-hLq">
-                                    <rect key="frame" x="0.0" y="8" width="393" height="18"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" red="1" green="0.41568627450980389" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="Sy7-Es-hLq" secondAttribute="bottom" constant="8" id="UJ1-0H-zGI"/>
-                                <constraint firstAttribute="trailing" secondItem="Sy7-Es-hLq" secondAttribute="trailing" id="Yeq-Xh-Mwy"/>
-                                <constraint firstItem="Sy7-Es-hLq" firstAttribute="leading" secondItem="hFW-EL-Euh" secondAttribute="leading" id="eeY-n8-tN0"/>
-                                <constraint firstItem="Sy7-Es-hLq" firstAttribute="top" secondItem="hFW-EL-Euh" secondAttribute="top" constant="8" id="jdV-Lu-nxS"/>
-                            </constraints>
-                            <connections>
-                                <outlet property="label" destination="Sy7-Es-hLq" id="fYK-uI-9mN"/>
-                            </connections>
-                        </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="tgI-XM-jeC">
-                            <rect key="frame" x="0.0" y="687" width="393" height="16"/>
+                            <rect key="frame" x="0.0" y="653" width="393" height="16"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="FeedImageCell" rowHeight="575" id="EIk-kC-mFi" customClass="FeedImageCell" customModule="EssentialFeediOS" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="84" width="393" height="575"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="575"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EIk-kC-mFi" id="eHb-76-Znf">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="575"/>
@@ -167,16 +146,9 @@
                             <action selector="refresh" destination="s0J-7C-jrM" eventType="valueChanged" id="jaN-UK-Lbc"/>
                         </connections>
                     </refreshControl>
-                    <connections>
-                        <outlet property="errorView" destination="hFW-EL-Euh" id="gyx-BV-lG7"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mi3-WT-3h9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Je6-1L-0eq">
-                    <connections>
-                        <action selector="hideMessageAnimated" destination="hFW-EL-Euh" id="wW7-l2-E6W"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Je6-1L-0eq"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
         </scene>
