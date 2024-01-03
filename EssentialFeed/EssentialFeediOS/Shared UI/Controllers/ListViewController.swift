@@ -19,8 +19,8 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         configureTableView()
         
         onViewIsAppearing = { vc in
-            vc.refresh()
             vc.onViewIsAppearing = nil
+            vc.refresh()
         }
     }
     
