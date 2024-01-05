@@ -62,7 +62,7 @@ final class FeedAcceptanceTests: XCTestCase {
         store: InMemoryFeedStore = .empty
     ) -> ListViewController {
         let sut = SceneDelegate(httpClient: httpClient, store: store)
-        sut.window = UIWindow(frame: CGRect(x: 0, y: 0, width: 1, height: 1))
+        sut.window = UIWindow(frame: CGRect(x: 0, y: 0, width: 390, height: 1))
         sut.configureWindow()
         
         let nav = sut.window?.rootViewController as? UINavigationController
@@ -81,7 +81,7 @@ final class FeedAcceptanceTests: XCTestCase {
         
         feed.simulateTapOnFeedImage(at: 0)
         RunLoop.current.run(until: Date())
-        
+
         let nav = feed.navigationController
         let vc = nav?.topViewController as! ListViewController
         vc.simulateAppearance()
