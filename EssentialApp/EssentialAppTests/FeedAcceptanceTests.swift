@@ -67,20 +67,13 @@ final class FeedAcceptanceTests: XCTestCase {
         
         let nav = sut.window?.rootViewController as? UINavigationController
         let vc = nav?.topViewController as! ListViewController
-        
         vc.simulateAppearance()
-        
         return vc
     }
-    
+
     private func enterBackground(with store: InMemoryFeedStore) {
         let sut = SceneDelegate(httpClient: HTTPClientStub.offline, store: store)
         sut.sceneWillResignActive(UIApplication.shared.connectedScenes.first!)
-    }
-    
-    private func response(for url: URL) -> (Data, HTTPURLResponse) {
-        let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)!
-        return (makeData(for: url), response)
     }
     
     private func showCommentsForFirstImage() -> ListViewController {
@@ -92,13 +85,17 @@ final class FeedAcceptanceTests: XCTestCase {
         let nav = feed.navigationController
         let vc = nav?.topViewController as! ListViewController
         vc.simulateAppearance()
-        
         return vc
+    }
+
+    private func response(for url: URL) -> (Data, HTTPURLResponse) {
+        let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)!
+        return (makeData(for: url), response)
     }
 
     private func makeData(for url: URL) -> Data {
         switch url.path {
-        case "/image-1", "/image-2":
+        case "/image-0", "/image-1":
             return makeImageData()
         
         case "/essential-feed/v1/feed":
@@ -118,8 +115,8 @@ final class FeedAcceptanceTests: XCTestCase {
 
     private func makeFeedData() -> Data {
         return try! JSONSerialization.data(withJSONObject: ["items": [
-            ["id": "2AB2AE66-A4B7-4A16-B374-51BBAC8DB086", "image": "http://feed.com/image-1"],
-            ["id": "A28F5FE3-27A7-44E9-8DF5-53742D0E4A5A", "image": "http://feed.com/image-2"]
+            ["id": "2AB2AE66-A4B7-4A16-B374-51BBAC8DB086", "image": "http://feed.com/image-0"],
+            ["id": "A28F5FE3-27A7-44E9-8DF5-53742D0E4A5A", "image": "http://feed.com/image-1"]
         ]])
     }
     

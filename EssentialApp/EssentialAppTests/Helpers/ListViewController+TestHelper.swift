@@ -38,6 +38,20 @@ extension ListViewController {
         refreshControl = fakeRefreshControl
     }
     
+    private class FakeUIRefreshControl: UIRefreshControl {
+        private var _isRefreshing = false
+        
+        override var isRefreshing: Bool { _isRefreshing }
+
+        override func beginRefreshing() {
+            _isRefreshing = true
+        }
+        
+        override func endRefreshing() {
+            _isRefreshing = false
+        }
+    }
+    
     func simulateErrorViewTap() {
         errorView.simulateTap()
     }
@@ -72,7 +86,7 @@ extension ListViewController {
 
 extension ListViewController {
     func numberOfRenderedComments() -> Int {
-        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: commentsSection)
+        tableView.numberOfSections > 0 ? tableView.numberOfRows(inSection: commentsSection) : 0
     }
     
     func commentMessage(at row: Int) -> String? {
@@ -154,18 +168,4 @@ extension ListViewController {
         return simulateFeedImageViewVisible(at: index)?.renderedImage
     }
 
-}
-
-private class FakeUIRefreshControl: UIRefreshControl {
-    private var _isRefreshing = false
-    
-    override var isRefreshing: Bool { _isRefreshing }
-
-    override func beginRefreshing() {
-        _isRefreshing = true
-    }
-    
-    override func endRefreshing() {
-        _isRefreshing = false
-    }
 }

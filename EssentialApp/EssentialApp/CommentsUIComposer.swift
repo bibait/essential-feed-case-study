@@ -1,5 +1,5 @@
 //
-// Copyright © 2020 Essential Developer. All rights reserved.
+// Copyright © Essential Developer. All rights reserved.
 //
 
 import UIKit
@@ -28,7 +28,7 @@ public final class CommentsUIComposer {
         
         return commentsController
     }
-
+    
     private static func makeCommentsViewController(title: String) -> ListViewController {
         let bundle = Bundle(for: ListViewController.self)
         let storyboard = UIStoryboard(name: "ImageComments", bundle: bundle)
