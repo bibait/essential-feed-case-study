@@ -16,29 +16,19 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
     override public func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = dataSource
-        configureErrorView()
+        configureTableView()
         
         onViewIsAppearing = { vc in
-            vc.refresh()
             vc.onViewIsAppearing = nil
+            vc.refresh()
         }
     }
     
-    private func configureErrorView() {
-        let container = UIView()
-        container.backgroundColor = .clear
-        container.addSubview(errorView)
+    private func configureTableView() {
+        dataSource.defaultRowAnimation = .fade
+        tableView.dataSource = dataSource
+        tableView.tableHeaderView = errorView.makeContainer()
         
-        errorView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            errorView.leadingAnchor.constraint(equalTo: container.leadingAnchor),
-            container.trailingAnchor.constraint(equalTo: errorView.trailingAnchor),
-            errorView.topAnchor.constraint(equalTo: container.topAnchor),
-            container.bottomAnchor.constraint(equalTo: errorView.bottomAnchor),
-        ])
-        
-        tableView.tableHeaderView = container
         errorView.onHide = { [weak self] in
             self?.tableView.beginUpdates()
             self?.tableView.sizeTableHeaderToFit()
@@ -52,22 +42,28 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         onViewIsAppearing?(self)
     }
     
-    public func display(_ viewModel: ResourceLoadingViewModel) {
-        refreshControl?.update(isRefreshing: viewModel.isLoading)
-    }
-    
-    public func display(_ viewModel: ResourceErrorViewModel) {
-        errorView.message = viewModel.message
-    }
-    
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         tableView.sizeTableHeaderToFit()
     }
     
+    public override func traitCollectionDidChange(_ previous: UITraitCollection?) {
+        if previous?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
+            tableView.reloadData()
+        }
+    }
+    
     @IBAction private func refresh() {
         onRefresh?()
+    }
+    
+    public func display(_ viewModel: ResourceLoadingViewModel) {
+        refreshControl?.update(isRefreshing: viewModel.isLoading)
+    }
+    
+    public func display(_ viewModel: ResourceErrorViewModel) {
+        errorView.message = viewModel.message
     }
     
     public func display(_ cellControllers: [CellController]) {
@@ -80,6 +76,11 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         } else {
             dataSource.apply(snapshot)
         }
+    }
+    
+    public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let delegate = cellController(at: indexPath)?.delegate
+        delegate?.tableView?(tableView, didSelectRowAt: indexPath)
     }
     
     public override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

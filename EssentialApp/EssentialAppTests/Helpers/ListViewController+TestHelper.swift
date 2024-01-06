@@ -13,29 +13,43 @@ extension ListViewController {
         endAppearanceTransition()
     }
     
-    func simulateUserInitiatedReload() {
-        refreshControl?.simulatePullToRefresh()
-    }
-    
     private func prepareForFirstAppearance() {
         setSmallFrameToPreventRenderingCells()
         replaceRefreshControlWithFakeForiOS17PlusSupport()
     }
-
+    
     private func setSmallFrameToPreventRenderingCells() {
         tableView.frame = CGRect(x: 0, y: 0, width: 390, height: 1)
     }
-
+    
     private func replaceRefreshControlWithFakeForiOS17PlusSupport() {
         let fakeRefreshControl = FakeUIRefreshControl()
-
+        
         refreshControl?.allTargets.forEach { target in
             refreshControl?.actions(forTarget: target, forControlEvent: .valueChanged)?.forEach { action in
                 fakeRefreshControl.addTarget(target, action: Selector(action), for: .valueChanged)
             }
         }
-
+        
         refreshControl = fakeRefreshControl
+    }
+
+    private class FakeUIRefreshControl: UIRefreshControl {
+        private var _isRefreshing = false
+        
+        override var isRefreshing: Bool { _isRefreshing }
+
+        override func beginRefreshing() {
+            _isRefreshing = true
+        }
+        
+        override func endRefreshing() {
+            _isRefreshing = false
+        }
+    }
+    
+    func simulateUserInitiatedReload() {
+        refreshControl?.simulatePullToRefresh()
     }
     
     func simulateErrorViewTap() {
@@ -49,7 +63,9 @@ extension ListViewController {
     var isShowingLoadingIndicator: Bool {
         return refreshControl?.isRefreshing == true
     }
-    
+}
+
+extension ListViewController {
     func numberOfRenderedFeedImageViews() -> Int {
         tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: feedImagesSection)
     }
@@ -66,7 +82,37 @@ extension ListViewController {
     private var feedImagesSection: Int {
         return 0
     }
+}
+
+extension ListViewController {
+    func numberOfRenderedComments() -> Int {
+        tableView.numberOfSections > 0 ? tableView.numberOfRows(inSection: commentsSection) : 0
+    }
     
+    func commentMessage(at row: Int) -> String? {
+        commentView(at: row)?.messageLabel.text
+    }
+    
+    func commentDate(at row: Int) -> String? {
+        commentView(at: row)?.dateLabel.text
+    }
+    
+    func commentUsername(at row: Int) -> String? {
+        commentView(at: row)?.usernameLabel.text
+    }
+    
+    private func commentView(at row: Int) -> ImageCommentCell? {
+        guard numberOfRenderedComments() > row else { return nil }
+        
+        let ds = tableView.dataSource
+        let index = IndexPath(row: row, section: commentsSection)
+        
+        return ds?.tableView(tableView, cellForRowAt: index) as? ImageCommentCell
+    }
+
+    private var commentsSection: Int {
+        return 0
+    }
 }
 
 extension ListViewController {
@@ -98,6 +144,12 @@ extension ListViewController {
         return view
     }
     
+    func simulateTapOnFeedImage(at row: Int) {
+        let delegate = tableView.delegate
+        let index = IndexPath(row: row, section: feedImagesSection)
+        delegate?.tableView?(tableView, didSelectRowAt: index)
+    }
+
     func simulateFeedImageViewNearVisible(at row: Int) {
         let ds = tableView.prefetchDataSource
         let index = IndexPath(row: row, section: feedImagesSection)
@@ -116,18 +168,4 @@ extension ListViewController {
         return simulateFeedImageViewVisible(at: index)?.renderedImage
     }
 
-}
-
-private class FakeUIRefreshControl: UIRefreshControl {
-    private var _isRefreshing = false
-    
-    override var isRefreshing: Bool { _isRefreshing }
-
-    override func beginRefreshing() {
-        _isRefreshing = true
-    }
-    
-    override func endRefreshing() {
-        _isRefreshing = false
-    }
 }
