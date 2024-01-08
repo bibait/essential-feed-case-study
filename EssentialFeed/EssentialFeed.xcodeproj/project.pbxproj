@@ -35,6 +35,9 @@
 		0E4369732B4C09BF00E43A2D /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4369702B4C09BE00E43A2D /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png */; };
 		0E4369742B4C09BF00E43A2D /* IMAGE_COMMENTS_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4369712B4C09BF00E43A2D /* IMAGE_COMMENTS_light.png */; };
 		0E4369762B4C09FB00E43A2D /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4369752B4C09FB00E43A2D /* LoadMoreCell.swift */; };
+		0E43697A2B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4369772B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_light.png */; };
+		0E43697B2B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4369782B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_dark.png */; };
+		0E43697C2B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E4369792B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png */; };
 		0E5748482B2DFB5E0077C1B0 /* LocalFeedImageDataFromCacheUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5748472B2DFB5E0077C1B0 /* LocalFeedImageDataFromCacheUseCaseTests.swift */; };
 		0E58D0B22B43FE0A00AC8C36 /* FeedImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E58D0B12B43FE0A00AC8C36 /* FeedImageDataMapper.swift */; };
 		0E58D0B42B4419B300AC8C36 /* UIView+Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E58D0B32B4419B300AC8C36 /* UIView+Container.swift */; };
@@ -198,6 +201,9 @@
 		0E4369702B4C09BE00E43A2D /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_light_extraExtraExtraLarge.png; sourceTree = "<group>"; };
 		0E4369712B4C09BF00E43A2D /* IMAGE_COMMENTS_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMAGE_COMMENTS_light.png; sourceTree = "<group>"; };
 		0E4369752B4C09FB00E43A2D /* LoadMoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreCell.swift; sourceTree = "<group>"; };
+		0E4369772B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_LOAD_MORE_ERROR_light.png; sourceTree = "<group>"; };
+		0E4369782B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_LOAD_MORE_ERROR_dark.png; sourceTree = "<group>"; };
+		0E4369792B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png; sourceTree = "<group>"; };
 		0E5748472B2DFB5E0077C1B0 /* LocalFeedImageDataFromCacheUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFeedImageDataFromCacheUseCaseTests.swift; sourceTree = "<group>"; };
 		0E58D0B12B43FE0A00AC8C36 /* FeedImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedImageDataMapper.swift; sourceTree = "<group>"; };
 		0E58D0B32B4419B300AC8C36 /* UIView+Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Container.swift"; sourceTree = "<group>"; };
@@ -756,6 +762,9 @@
 		0EBF973D2B403B57004675F3 /* snapshots */ = {
 			isa = PBXGroup;
 			children = (
+				0E4369782B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_dark.png */,
+				0E4369792B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png */,
+				0E4369772B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_light.png */,
 				0EBF973E2B403B57004675F3 /* FEED_WITH_FAILED_IMAGE_LOADING_dark.png */,
 				0EBF973F2B403B57004675F3 /* FEED_WITH_CONTENT_dark.png */,
 				0EBF97402B403B57004675F3 /* FEED_WITH_CONTENT_light_extraExtraExtraLarge.png */,
@@ -1096,6 +1105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EBF97372B4038EE004675F3 /* EMPTY_LIST_light.png in Resources */,
+				0E43697C2B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_light_extraExtraExtraLarge.png in Resources */,
 				0EBF97352B4038EE004675F3 /* LIST_WITH_ERROR_MESSAGE_light.png in Resources */,
 				0EBF97432B403B57004675F3 /* FEED_WITH_FAILED_IMAGE_LOADING_dark.png in Resources */,
 				0EBF97452B403B57004675F3 /* FEED_WITH_CONTENT_light_extraExtraExtraLarge.png in Resources */,
@@ -1106,7 +1116,9 @@
 				0E4369722B4C09BF00E43A2D /* IMAGE_COMMENTS_dark.png in Resources */,
 				0E4369732B4C09BF00E43A2D /* IMAGE_COMMENTS_light_extraExtraExtraLarge.png in Resources */,
 				0EBF97442B403B57004675F3 /* FEED_WITH_CONTENT_dark.png in Resources */,
+				0E43697B2B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_dark.png in Resources */,
 				0E4369742B4C09BF00E43A2D /* IMAGE_COMMENTS_light.png in Resources */,
+				0E43697A2B4C154800E43A2D /* FEED_WITH_LOAD_MORE_ERROR_light.png in Resources */,
 				0EBF97472B403B57004675F3 /* FEED_WITH_FAILED_IMAGE_LOADING_light.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
