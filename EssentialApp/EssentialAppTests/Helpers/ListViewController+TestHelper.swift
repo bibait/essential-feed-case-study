@@ -56,6 +56,21 @@ extension ListViewController {
         errorView.simulateTap()
     }
     
+    func numberOfRows(in section: Int) -> Int {
+        tableView.numberOfSections > section ? tableView.numberOfRows(inSection: section) : 0
+    }
+    
+    func cell(row: Int, section: Int) -> UITableViewCell? {
+        guard numberOfRows(in: section) > row else {
+            return nil
+        }
+        
+        let dataSource = tableView.dataSource
+        let index = IndexPath(row: row, section: section)
+        
+        return dataSource?.tableView(tableView, cellForRowAt: index)
+    }
+    
     var errorMessage: String? {
         return errorView.message
     }
@@ -67,47 +82,35 @@ extension ListViewController {
 
 extension ListViewController {
     func numberOfRenderedFeedImageViews() -> Int {
-        tableView.numberOfSections == 0 ? 0 : tableView.numberOfRows(inSection: feedImagesSection)
+        numberOfRows(in: feedImagesSection)
     }
     
     func feedImageView(at row: Int) -> UITableViewCell? {
-        guard numberOfRenderedFeedImageViews() > row else { return nil }
-        
-        let ds = tableView.dataSource
-        let index = IndexPath(row: row, section: feedImagesSection)
-        
-        return ds?.tableView(tableView, cellForRowAt: index)
+        return cell(row: row, section: feedImagesSection)
     }
     
-    private var feedImagesSection: Int {
-        return 0
-    }
+    private var feedImagesSection: Int { 0 }
 }
 
 extension ListViewController {
     func numberOfRenderedComments() -> Int {
-        tableView.numberOfSections > 0 ? tableView.numberOfRows(inSection: commentsSection) : 0
+        return numberOfRows(in: commentsSection)
     }
     
     func commentMessage(at row: Int) -> String? {
-        commentView(at: row)?.messageLabel.text
+        return commentView(at: row)?.messageLabel.text
     }
     
     func commentDate(at row: Int) -> String? {
-        commentView(at: row)?.dateLabel.text
+        return commentView(at: row)?.dateLabel.text
     }
     
     func commentUsername(at row: Int) -> String? {
-        commentView(at: row)?.usernameLabel.text
+        return commentView(at: row)?.usernameLabel.text
     }
     
     private func commentView(at row: Int) -> ImageCommentCell? {
-        guard numberOfRenderedComments() > row else { return nil }
-        
-        let ds = tableView.dataSource
-        let index = IndexPath(row: row, section: commentsSection)
-        
-        return ds?.tableView(tableView, cellForRowAt: index) as? ImageCommentCell
+        return cell(row: row, section: commentsSection) as? ImageCommentCell
     }
 
     private var commentsSection: Int {
@@ -164,8 +167,39 @@ extension ListViewController {
         ds?.tableView?(tableView, cancelPrefetchingForRowsAt: [index])
     }
     
+    func simulateLoadMoreFeedAction() {
+        guard let view = loadMoreFeedCell() else { return }
+        
+        let delegate = tableView.delegate
+        let index = IndexPath(row: 0, section: feedLoadMoreSection)
+        delegate?.tableView?(tableView, willDisplay: view, forRowAt: index)
+    }
+    
+    func simulateTapOnLoadMoreFeedError() {
+        let delegate = tableView.delegate
+        let index = IndexPath(row: 0, section: feedLoadMoreSection)
+        delegate?.tableView?(tableView, didSelectRowAt: index)
+    }
+    
+    var isShowingLoadMoreFeedIndicator: Bool {
+        return loadMoreFeedCell()?.isLoading == true
+    }
+    
+    var loadMoreFeedErrorMessage: String? {
+        return loadMoreFeedCell()?.message
+    }
+    
+    private func loadMoreFeedCell() -> LoadMoreCell? {
+        return cell(row: 0, section: feedLoadMoreSection) as? LoadMoreCell
+    }
+    
     func renderedFeedImageData(at index: Int) -> Data? {
         return simulateFeedImageViewVisible(at: index)?.renderedImage
     }
+    
+    var canLoadMoreFeed: Bool {
+        loadMoreFeedCell() != nil
+    }
 
+    private var feedLoadMoreSection: Int { 1 }
 }
