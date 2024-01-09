@@ -2,18 +2,19 @@ import Foundation
 import EssentialFeed
 
 class FeedImageDataStoreSpy: FeedImageDataStore {
+    
     enum Message: Equatable {
         case insert(data: Data, for: URL)
         case retrieve(dataForURL: URL)
     }
     
-    private var retrievalCompletions = [(FeedImageDataStore.RetrievalResult) -> Void]()
-    private var insertionCompletions = [(FeedImageDataStore.InsertionResult) -> Void]()
     private(set) var receivedMessages = [Message]()
+    private var retrievalCompletions = [(FeedImageDataStore.RetrievalResult) -> Void]()
+    private var insertionResult: Result<Void, Error>?
     
-    func insert(_ data: Data, for url: URL, completion: @escaping (InsertionResult) -> Void) {
+    func insert(_ data: Data, for url: URL) throws {
         receivedMessages.append(.insert(data: data, for: url))
-        insertionCompletions.append(completion)
+        try insertionResult?.get()
     }
 
     func retrieve(dataForURL url: URL, completion: @escaping (FeedImageDataStore.RetrievalResult) -> Void) {
@@ -29,12 +30,12 @@ class FeedImageDataStoreSpy: FeedImageDataStore {
         retrievalCompletions[index](.success(data))
     }
     
-    func completeInsertion(with error: Error, at index: Int = 0) {
-        insertionCompletions[index](.failure(error))
+    func completeInsertion(with error: Error) {
+        insertionResult = .failure(error)
     }
     
-    func completeInsertionSuccessfully(at index: Int = 0) {
-        insertionCompletions[index](.success(()))
+    func completeInsertionSuccessfully() {
+        insertionResult = .success(())
     }
     
 }
