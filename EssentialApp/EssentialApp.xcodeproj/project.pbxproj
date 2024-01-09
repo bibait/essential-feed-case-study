@@ -17,7 +17,6 @@
 		0E5CD5AE2B30A29600CCD700 /* EssentialFeediOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5CD5AA2B30A29600CCD700 /* EssentialFeediOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0EB5038F2B30A15B00DCA828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB5038E2B30A15B00DCA828 /* AppDelegate.swift */; };
 		0EB503912B30A15B00DCA828 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB503902B30A15B00DCA828 /* SceneDelegate.swift */; };
-		0EB503932B30A15B00DCA828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB503922B30A15B00DCA828 /* ViewController.swift */; };
 		0EB503982B30A15D00DCA828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB503972B30A15D00DCA828 /* Assets.xcassets */; };
 		0EB5039B2B30A15D00DCA828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB503992B30A15D00DCA828 /* LaunchScreen.storyboard */; };
 		0EB7834E2B31899F0021401C /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB7834D2B31899F0021401C /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -80,7 +79,6 @@
 		0EB5038B2B30A15B00DCA828 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB5038E2B30A15B00DCA828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EB503902B30A15B00DCA828 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0EB503922B30A15B00DCA828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0EB503972B30A15D00DCA828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EB5039A2B30A15D00DCA828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EB5039C2B30A15D00DCA828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 			children = (
 				0EB5038E2B30A15B00DCA828 /* AppDelegate.swift */,
 				0EB503902B30A15B00DCA828 /* SceneDelegate.swift */,
-				0EB503922B30A15B00DCA828 /* ViewController.swift */,
 				0EE4C5132B32D27F00859E6D /* FeedUIComposer.swift */,
 				0EE4C5152B32D27F00859E6D /* WeakRefVirtualProxy.swift */,
 				0EE4C5142B32D27F00859E6D /* LoadResourcePresentationAdapter.swift */,
@@ -317,7 +314,6 @@
 				0EE4C51C2B32D27F00859E6D /* FeedViewAdapter.swift in Sources */,
 				0E401C512B3486BC00C6DBC2 /* CombineHelpers.swift in Sources */,
 				0E4369802B4C666100E43A2D /* NullStore.swift in Sources */,
-				0EB503932B30A15B00DCA828 /* ViewController.swift in Sources */,
 				0EB5038F2B30A15B00DCA828 /* AppDelegate.swift in Sources */,
 				0EBF974D2B4061A2004675F3 /* CommentsUIComposer.swift in Sources */,
 				0EE4C5182B32D27F00859E6D /* WeakRefVirtualProxy.swift in Sources */,
