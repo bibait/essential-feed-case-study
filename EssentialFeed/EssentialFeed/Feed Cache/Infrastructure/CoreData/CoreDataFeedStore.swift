@@ -1,9 +1,9 @@
-import Foundation
 import CoreData
 
 public final class CoreDataFeedStore {
     private static let modelName = "FeedStore"
     private static let model = NSManagedObjectModel.with(name: modelName, in: Bundle(for: CoreDataFeedStore.self))
+    
     private let container: NSPersistentContainer
     private let context: NSManagedObjectContext
     
@@ -25,9 +25,11 @@ public final class CoreDataFeedStore {
         }
     }
     
-    func perform(_ action: @escaping (NSManagedObjectContext) -> Void) {
+    func performSync<R>(_ action: (NSManagedObjectContext) -> Result<R, Error>) throws -> R {
         let context = self.context
-        context.perform { action(context) }
+        var result: Result<R, Error>!
+        context.performAndWait { result = action(context) }
+        return try result.get()
     }
     
     private func cleanUpReferencesToPersistentStores() {
@@ -40,5 +42,4 @@ public final class CoreDataFeedStore {
     deinit {
         cleanUpReferencesToPersistentStores()
     }
-    
 }
