@@ -10,7 +10,7 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
             controller.dataSource.tableView(tableView, cellForRowAt: indexPath)
         }
     }()
-        
+    
     public var onRefresh: (() -> Void)?
     
     override public func viewDidLoad() {
