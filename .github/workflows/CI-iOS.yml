@@ -1,7 +1,7 @@
 name: CI-iOS
 
 on:
-  push:
+  pull_request:
     branches: [ main ]
 
 jobs:
@@ -17,4 +17,4 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_15.0.1.app
     
     - name: Build and Test
-      run: xcodebuild clean build test -workspace EssentialApp/EssentialApp.xcworkspace -scheme "CI_iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" ONLY_ACTIVE_ARCH=YES
+      run: xcodebuild test -workspace EssentialApp/EssentialApp.xcworkspace -scheme "CI_iOS" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 15 Pro,OS=17.0.1" ONLY_ACTIVE_ARCH=YES
